@@ -5,6 +5,14 @@ public class Humain {
 	private String boissonFav;
 	private int argent;
 	
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public void setArgent(int argent) {
+		this.argent = argent;
+	}
+
 	public Humain(String n,String boisson,int arg) {
 		this.nom=n;
 		this.boissonFav=boisson;
@@ -27,16 +35,16 @@ public class Humain {
 		parler("Mmmm, un bon verre de "+ this.boissonFav + " ! GLOUPS !");
 	}
 
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		this.argent+=gain;
 	}
 	
 
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		this.argent-=perte;
 	}
 	
-	private void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println(String.format("(%s) - %s", getNom(),texte));
 	}
 	
