@@ -13,8 +13,8 @@ public class Commercant extends Humain{
 		return arg;
 	}
 	
-	public void recevoir(int argent) {
-		this.gagnerArgent(argent);
-		parler(String.format("%d sous ! Je te remercie généreux donateur!", argent));
+	public void recevoir(int arg) {
+		this.gagnerArgent(arg);
+		parler(String.format("%d sous ! Je te remercie généreux donateur!", arg));
 	}
 }
